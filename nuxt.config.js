@@ -41,6 +41,10 @@ module.exports = {
   modules: [
   ],
 
+  router: {
+    base: process.env.ROUTER_BASE_PATH ? process.env.ROUTER_BASE_PATH : '/',
+  },
+
   /*
   ** Build configuration
   */
@@ -58,6 +62,8 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
-  }
+    },
+    publicPath: process.env.PUBLIC_PATH ? process.env.PUBLIC_PATH : '/_build/',
+  },
+  
 }
